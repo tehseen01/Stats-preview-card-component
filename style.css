@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card{
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.text-container {
+    padding: 4rem;
+    margin-right: 2rem;
+}
+
+.img-container {
+    position: relative;
+    filter: contrast(1.5);
+    width: 36rem;
+    margin-bottom: -5px;
+}
+
+.hero-img {
+    height: -webkit-fill-available;
+}
+
+.img-container::after {
+    content: '';
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: hsl(277deg 64% 61% / 56%);
+}
+
+.title {
+    font-size: 2.4rem;
+    font-family: 'Inter', sans-serif;
+    margin: 1rem 0;
+}
+
+.title span {
+    color: hsl(277, 64%, 61%);
+}
+
+.desc {
+    font-family: 'Inter', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.4;
+    margin: 2rem 1rem 2rem 0;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    margin-top: 4rem;
+}
+
+.box div {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.box div span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 650px) {
+    .card {
+       display: flex;
+       flex-direction: column-reverse;
+       text-align: center;
+    }
+    .img-container {
+        width: auto;
+    }
+    .hero-img {
+        width: -webkit-fill-available;
+    }
+    .text-container {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+    .desc {
+        margin: 1rem 0;
+        font-size: 15px;
+    }
+
+    .box {
+        display: block;
+        margin: 1.5rem 0 0 0;
+    }
+    .box div {
+        margin-bottom: 1rem;
+    }
+
+    .box div span {
+        margin: 0;
+    }
+}
